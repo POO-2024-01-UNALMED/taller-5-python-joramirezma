@@ -47,7 +47,7 @@ class Animal():
     def getZona(self):
         return self._zona
     
-    def __str__(self):
+    def toString(self):
         if (self._zona != None):
             return "Mi nombre es " + self._nombre + ", tengo una edad de " + self._edad + ", habito en " + self._habitat + " y mi genero es " + self._genero + ", la zona en la que me ubico es " + self._zona + ", en el " + self._zona.getZoo()
         else:
