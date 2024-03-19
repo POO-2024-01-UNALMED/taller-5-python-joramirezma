@@ -5,8 +5,8 @@ class Ave(Animal):
     halcones = 0
     aguilas = 0
     
-    def __init__(self, nombre="",edad=0,habitat="",genero="",zona=None,colorPlumas=""):
-        super().__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self, nombre="",edad=0,habitat="",genero="",colorPlumas=""):
+        super().__init__(nombre,edad,habitat,genero,zona=None)
         self._colorPlumas=colorPlumas
         Ave._listado.append(self)
 
@@ -41,14 +41,14 @@ class Ave(Animal):
         return self._colorPlumas
 
     @classmethod
-    def crearHalcon(cls,nombre,edad,genero,zona=None):
+    def crearHalcon(cls,nombre,edad,genero):
         Ave.halcones += 1
-        return cls(nombre,edad,"montanas",genero,zona,"cafe glorioso")
+        return cls(nombre,edad,"montanas",genero,"cafe glorioso")
 
     @classmethod
-    def crearAguila(cls,nombre,edad,genero,zona=None):
+    def crearAguila(cls,nombre,edad,genero):
         Ave.aguilas += 1
-        return cls(nombre,edad,"montanas",genero,zona,"blanco y amarillo")
+        return cls(nombre,edad,"montanas",genero,"blanco y amarillo")
 
     @classmethod
     def cantidadAves(cls):
