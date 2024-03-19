@@ -1,19 +1,13 @@
+from gestion.zona import Zona
 from zooAnimales.animal import Animal
-from multimethod import multimethod
+
 
 class Ave(Animal):
     _listado = []
     halcones = 0
     aguilas = 0
     
-    @multimethod
     def __init__(self, nombre="",edad=0,habitat="",genero="",zona=None,colorPlumas=""):
-        super().__init__(nombre,edad,habitat,genero,zona)
-        self._colorPlumas=colorPlumas
-        Ave._listado.append(self)
-        
-    @multimethod
-    def __init__(self, nombre="",edad=0,habitat="",genero="",colorPlumas="",zona=None):
         super().__init__(nombre,edad,habitat,genero,zona)
         self._colorPlumas=colorPlumas
         Ave._listado.append(self)

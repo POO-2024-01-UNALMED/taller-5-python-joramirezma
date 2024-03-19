@@ -1,24 +1,16 @@
 from zooAnimales.animal import Animal
-from multimethod import multimethod
 
 class Pez(Animal):
     _listado = []
     salmones = 0
     bacalaos = 0
     
-    @multimethod
     def __init__(self, nombre="",edad=0,habitat="",genero="",zona=None,colorEscamas="",cantidadAletas=0):
         super().__init__(nombre,edad,habitat,genero,zona)
         self._colorEscamas=colorEscamas
         self._cantidadAletas=cantidadAletas
         Pez._listado.append(self)
         
-    @multimethod
-    def __init__(self, nombre="",edad=0,habitat="",genero="",colorEscamas="",cantidadAletas=0,zona=None):
-        super().__init__(nombre,edad,habitat,genero,zona)
-        self._colorEscamas=colorEscamas
-        self._cantidadAletas=cantidadAletas
-        Pez._listado.append(self)
 
     @classmethod
     def setListado(cls,listado):
