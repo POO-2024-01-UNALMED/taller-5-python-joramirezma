@@ -10,8 +10,7 @@ class Anfibio(Animal):
         self._colorPiel=colorPiel
         self._venenoso=venenoso
         Anfibio._listado.append(self)
-        
-        
+
     @classmethod
     def setListado(cls,listado):
         cls._listado = listado
